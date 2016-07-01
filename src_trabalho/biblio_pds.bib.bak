@@ -1,0 +1,42 @@
+% This file was created with JabRef 2.10.
+% Encoding: UTF8
+
+
+@Article{aliaksei_2014,
+  Title                    = {Big Data Analysis with Signal Processing on Graphs},
+  Author                   = {Aliaksei Sandryhaila AND José M.F. Moura},
+  Journal                  = {IEEE Signal Processing Magazine},
+  Year                     = {2014},
+
+  Owner                    = {papita},
+  Timestamp                = {2016.06.17}
+}
+
+@Article{,
+  Title                    = {DISCRETE SIGNAL PROCESSING ON GRAPHS: GRAPH FOURIER TRANSFORM},
+  Author                   = {Aliaksei Sandryhaila and José M. F. Moura},
+
+  Owner                    = {papita},
+  Timestamp                = {2016.06.17}
+}
+
+@Article{aliaksei_2013,
+  Title                    = {Discrete Signal Processing On Graphs: Graph Filters},
+  Author                   = {Aliaksei Sandryhaila and José M. F. Moura},
+  Journal                  = {IEEE Signal Processing Magazine},
+  Year                     = {2013},
+
+  Owner                    = {papita},
+  Timestamp                = {2016.06.04}
+}
+
+@Book{joana_2005,
+  Title                    = {Apontamentos de Complementos de \'Algebra Linear e Geometria Analítica},
+  Author                   = {Joana Teles AND Luís Nunes Vicente},
+  Publisher                = {Departamento de Matemática da FCTUC},
+  Year                     = {2005},
+
+  Owner                    = {papita},
+  Timestamp                = {2016.06.17}
+}
+

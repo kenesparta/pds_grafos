@@ -1,0 +1,53 @@
+span.slide-number-a {
+    font-size: x-large;
+    padding: 10px;
+}
+
+hr.style-five {
+    margin-bottom: 30px;
+    margin-bottom: 30px;
+    border: 0;
+    height: 0;
+    box-shadow: 1px 1px 5px 1px rgba(75, 0, 130, .7);
+}
+
+hr.style-five:after {
+    content: "\00a0";
+}
+
+
+hr.titulo {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(75,0,130), rgba(0, 0, 0, 0));
+}
+
+li.fragment {
+    margin-bottom: 35px
+}
+
+h1.titulo {
+    color: rgb(75, 0, 130);
+    font-weight: 800;
+    text-shadow: 2px 2px 3px rgba(60, 0, 130, .4)
+}
+
+h2.titulo-slide {
+    color: rgb(75, 0, 130);
+    font-weight: 800;
+}
+
+h3.sub-titulo{
+    color: rgb(138,43,226);
+    font-weight: 500;
+}
+
+img.git {
+    opacity: 0.5;
+    filter: alpha(opacity=0.5); /* For IE8 and earlier */
+}
+
+img.git:hover {
+    opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}

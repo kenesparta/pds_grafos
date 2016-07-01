@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Apresentação Memorial TCC</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- Estilo próprio -->
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-background-image="img/bgrd.png"> <!-- CAPA -->
+                    <img src="img/LOGO_PNG.png" width="90">
+                    <p style="margin-top: -15px">
+                        <small> Universidade Federal do Ceará<br><i style="font-size: 20px">Campus Sobral</i></small>
+                    </p>
+                    <hr class="titulo">
+                    <h3 style="text-shadow: 1px 1px 3px rgba(60, 0, 130, .5); font-weight: bold; color: rgb(75,0,130)">
+                        Processamento Digital de Sinais <br> Aplicado em Grafos: <br>
+                        Classificação de Dígitos Manuscritos
+                    </h3>
+                    <hr class="titulo">
+                    <h4 style="color: #2a76dd; font-weight: 800"> Ken E. Ccorahua </h4>
+                    <p style="color: #FF5E99">
+                        <small> nek.112358@gmail.com</small>
+                        <br>
+                        <small style="margin-top: 5px">
+                            <a target="_blank" href="https://github.com/papita/pds-grafos">
+                                <img class="git" src="img/GitHub-Mark.svg" width="45">
+                            </a>
+                        </small>
+                    </p>
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <h2 class="titulo-slide"> Objetivos </h2>
+                    <hr class="style-five">
+                    <ul style="list-style-type: disc">
+                        <li class="fragment fade-up"> Extrair &dbkarow; Classificar &dbkarow; Reconhecer</li>
+                        <li class="fragment fade-up"> Extrair: Artigos da Web</li>
+                        <li class="fragment fade-up"> Classificar: Artigos + Web Logs</li>
+                        <li class="fragment fade-up"> Reconhecer: Padrões de acessos a partir de Web Logs</li>
+                    </ul>
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <section>
+                        <h2 class="titulo-slide"> Web logs? </h2>
+                        <hr class="style-five">
+                        <h3 class="sub-titulo" style="margin-bottom: 50px">Composição dos Web logs da Wikipédia</h3>
+                        <img class="wiki" src="img/modelo_arquivo_wikipedia.svg" width="1000">
+                    </section>
+                    <section>
+                        <p>
+                            <small>
+                                <a target="_blank" href="https://dumps.wikimedia.org/other/pagecounts-raw/">Wiki Web logs</a>
+                            </small>
+                        </p>
+                        <iframe style="border: solid rgba(75, 0, 130, .5)" width="1024" height="550"
+                                src="https://wikitech.wikimedia.org/wiki/Analytics/Data/Pagecounts-raw">
+                        </iframe>
+                    </section>
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <h2 class="titulo-slide"> Fundamentação teórica </h2>
+                    <hr class="style-five">
+                    <img class="petriTeoria" src="img/rede_petri_teoria.svg" width="600">
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <h2 class="titulo-slide"> Metodologia CRISP-DM </h2>
+                    <hr class="style-five">
+                    <img class="crisp" src="img/crisp-dm.svg" width="800">
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <h2 class="titulo-slide"> Atividades da aplicação </h2>
+                    <hr class="style-five">
+                    <img class="petriApp" src="img/rede_petri_funcionamento.svg" width="1050">
+                </section>
+                <section data-background-image="img/bgrd.png">
+                    <h1 class="titulo"> OBRIGADO! </h1>
+                </section>
+            </div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script src="js/zoom.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    {src: 'plugin/markdown/marked.js'},
+                    {src: 'plugin/markdown/markdown.js'},
+                    {src: 'plugin/notes/notes.js', async: true},
+                    {
+                        src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                            hljs.initHighlightingOnLoad();
+                        }
+                    }
+                ]
+            });
+        </script>
+        <script>
+            document.querySelector('.petriTeoria').addEventListener('click', function (event) {
+                event.preventDefault();
+                zoom.to({element: event.target, scale: 2.5});
+            });
+            document.querySelector('.petriApp').addEventListener('click', function (event) {
+                event.preventDefault();
+                zoom.to({element: event.target, scale: 2.5});
+            });
+        </script>
+    </body>
+</html>
