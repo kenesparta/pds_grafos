@@ -1,0 +1,18 @@
+classdef Nos < handle 
+    properties        
+        vizinhanca
+    end
+    
+    properties (Constant = true)
+        KNN = 8; % Vizinhos cercanos
+    end
+    
+    methods
+        function no = Nos(matriz_imagem)
+            no
+ = neuronio@Neuronio(n);
+        end
+    end
+    
+end
+
