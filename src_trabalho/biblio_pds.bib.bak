@@ -31,9 +31,9 @@
 }
 
 @Book{joana_2005,
-  Title                    = {Apontamentos de Complementos de \'Algebra Linear e Geometria Analítica},
-  Author                   = {Joana Teles AND Luís Nunes Vicente},
-  Publisher                = {Departamento de Matemática da FCTUC},
+  Title                    = {Apontamentos de Complementos de \'Algebra Linear e Geometria Anal\'itica},
+  Author                   = {Joana Teles AND Lu\'is Nunes Vicente},
+  Publisher                = {Departamento de Matem\'atica da FCTUC},
   Year                     = {2005},
 
   Owner                    = {papita},

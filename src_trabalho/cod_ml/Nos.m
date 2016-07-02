@@ -1,7 +1,7 @@
 classdef Nos < handle 
     properties
-        nome_no
-        vizinhanca
+        imagemAsociada        
+        vizinhanca        
     end
     
     properties (Constant = true)
@@ -9,9 +9,11 @@ classdef Nos < handle
     end
     
     methods
-        function no = Nos(matriz_imagem)
-            no = matriz_imagem;
+        % matriz_imagem: deve ser uma matriz 28x28 e normalizada
+        %                com valores menores do que 1.
+        function no = Nos(matriz_imagem, etiqueta)
+            no.imagemAsociada = ImgGraf(matriz_imagem, etiqueta);
         end
-    end    
+    end
 end
 

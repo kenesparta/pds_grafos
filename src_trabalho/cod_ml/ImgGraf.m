@@ -2,20 +2,23 @@ classdef ImgGraf < handle
     properties        
         valorFrobenius
         matriz
-    end
-    
-    properties (Constant = true)
-        VALOR_MAX = 255; % Valor máximo de cor de um pixel
+        etiqueta
     end
     
     methods
         % matriz: ja deve de estar normalizada
-        function im = ImgGraf(matriz)
+        function im = ImgGraf(matriz, etiqueta)
             im.matriz = matriz;
+            im.etiqueta = etiqueta;
             im.valorFrobenius = im.frobenius;
         end
+        
+        function mostraImagem(im)
+            imshow(im.matriz);
+        end
     end
-    methods (Hidden = true, Access = private)        
+    
+    methods (Hidden = true, Access = private)      
         function saida = frobenius(im)
             saida = trace(im.matriz ^ 2) ^ .5;
         end

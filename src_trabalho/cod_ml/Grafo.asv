@@ -1,0 +1,14 @@
+classdef Grafo < handle 
+    properties
+    end
+    
+    methods
+        function grafo = Grafo(matriz, etiqueta)
+            grafo.matriz = matriz;
+            grafo.etiqueta = etiqueta;
+            grafo.valorFrobenius = grafo.frobenius;
+        end
+    end
+    
+end
+
