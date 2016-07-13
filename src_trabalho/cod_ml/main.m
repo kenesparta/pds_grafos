@@ -22,7 +22,7 @@ function varargout = main(varargin)
 
 % Edit the above text to modify the response to help main
 
-% Last Modified by GUIDE v2.5 30-Jun-2016 19:04:16
+% Last Modified by GUIDE v2.5 02-Jul-2016 18:12:47
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -73,8 +73,69 @@ function varargout = main_OutputFcn(hObject, eventdata, handles)
 varargout{1} = handles.output;
 
 
-% --- Executes on button press in pushbutton1.
-function pushbutton1_Callback(hObject, eventdata, handles)
-% hObject    handle to pushbutton1 (see GCBO)
+% --- Executes on button press in abrirArquivo.
+function abrirArquivo_Callback(hObject, eventdata, handles)
+    [arquivo, caminho] = uigetfile({'*.png';'*.jpeg'},'File Selector');    
+    imshow(ler_imagem([caminho arquivo]),'InitialMagnification','fit');
+    axes(handles.mostraImg);
+
+% --- Executes on button press in verGrafo.
+function verGrafo_Callback(hObject, eventdata, handles)
+% hObject    handle to verGrafo (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on selection change in popupmenu1.
+function popupmenu1_Callback(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu1 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popupmenu1
+
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popupmenu1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function numeroAmostras_Callback(hObject, eventdata, handles)
+% hObject    handle to numeroAmostras (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of numeroAmostras as text
+%        str2double(get(hObject,'String')) returns contents of numeroAmostras as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function numeroAmostras_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to numeroAmostras (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function mostraImg_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to mostraImg (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate mostraImg

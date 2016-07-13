@@ -20,7 +20,7 @@ classdef ImgGraf < handle
     
     methods (Hidden = true, Access = private)      
         function saida = frobenius(im)
-            saida = trace(im.matriz ^ 2) ^ .5;
+            saida = norm(im.matriz, 'fro');
         end
     end
 end
