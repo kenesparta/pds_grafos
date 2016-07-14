@@ -3,7 +3,7 @@ classdef Filtro
         grau
         coeficientes        
         matriz_adjacencia        
-        S_pred % saidas de predicao
+        filtro_construido
         tam % Tamanho da matriz de adjacencia
     end
     
@@ -14,13 +14,13 @@ classdef Filtro
             filtro.matriz_adjacencia = matriz_adjacencia;
             filtro.tam = length(matriz_adjacencia);
             filtro.grau = grau + 1;
-            filtro.coeficientes = filtro.filtro_coeficientes(S_con, S_tr);
-            filtro.S_pred = filtro.saida_filtro_construido(S_con);
+            filtro.coeficientes = filtro.saida_filtro(S_con, S_tr);
+            filtro.S_pred = filtro.saida_filtro_construido;
         end
     end
     
     methods (Hidden = true, Access = private)
-        function coef = filtro_coeficientes(filtro, S_con, S_tr)
+        function coef = saida_filtro_(filtro, S_con, S_tr)
             saida = zeros(filtro.tam, filtro.grau);
             for i=1:filtro.grau
                 saida(1:end,i) = diag(S_con) * ...
@@ -36,7 +36,7 @@ classdef Filtro
             for i=1:filtro.grau
                 saida = saida + filtro.coeficientes(i) * filtro.matriz_adjacencia ^ (i-1);
             end
-            pred = saida * S_con';
+            pred = filtro.filtro_construido * S_con';
         end
     end    
 end
