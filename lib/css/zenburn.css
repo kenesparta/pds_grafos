@@ -10,13 +10,13 @@ based on dark.css by Ivan Sagalaev
   overflow-x: auto;
   padding: 0.5em;
   background: #3f3f3f;
-  color: #dcdcdc;
+  color: #333;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
 .hljs-tag {
-  color: #e3ceab;
+    color: #ff6666;
 }
 
 .hljs-template-tag {
@@ -24,7 +24,7 @@ based on dark.css by Ivan Sagalaev
 }
 
 .hljs-number {
-  color: #8cd0d3;
+  color: #1b91ff;
 }
 
 .hljs-variable,

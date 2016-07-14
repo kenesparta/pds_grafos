@@ -14,6 +14,7 @@
 
         <!-- Estilo próprio -->
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/ml_hl.css">
 
         <!-- Printing and PDF exports -->
         <script>
@@ -61,8 +62,51 @@
                     </ul>
                 </section>
                 <section data-background-image="img/bgrd.png">
-                    <h2 class="titulo-slide"> Justificativa </h2>
-                    <hr class="style-five">
+                    <section>
+                        <h2 class="titulo-slide"> PDS em Grafos </h2>                        
+                        <hr class="style-five">
+                        <h3 class="sub-titulo" style="margin-bottom: 50px"> Deslocamento em grafos (Shift) </h3>
+                    </section>
+                    <section>
+                        <h3 class="sub-titulo" style="margin-bottom: 50px"> Deslocamento em grafos (Shift) </h3>
+                        <pre class="center"><code style="background-color: rgba(200,200,200,.5)" data-trim data-noescape>
+>> a = gallery('circul',[0;1;0;0;0;0;0]);
+   0     1     0     0     0     0     0
+   0     0     1     0     0     0     0
+   0     0     0     1     0     0     0
+   0     0     0     0     1     0     0
+   0     0     0     0     0     1     0
+   0     0     0     0     0     0     1
+   1     0     0     0     0     0     0
+>> s = [1 2 3 4 5 6 7]'
+s =
+     1
+     2
+     3
+     4
+     5
+     6
+     7
+>> s = a * s
+s =
+     2
+     3
+     4
+     5
+     6
+     7
+     1
+>> s = a * s
+s =
+     3
+     4
+     5
+     6
+     7
+     1
+     2
+                        </code></pre>
+                    </section>
                 </section>
                 <section data-background-image="img/bgrd.png">                    
                     <section>
@@ -70,7 +114,7 @@
                         <hr class="style-five">
                         <img class="wiki" src="img/3.PNG" width="150">
                         <img class="wiki" src="img/4.PNG" width="150">
-                        <img class="wiki" src="img/9.PNG" width="150">                        
+                        <img class="wiki" src="img/9.PNG" width="150">                     
                     </section>
                     <section>
                         <h2 class="titulo-slide"> Banco de dados MNIST </h2>
@@ -109,7 +153,7 @@
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
         <script src="js/zoom.js"></script>
-
+        <script src="js/ml_hl.js"></script>
         <script>
             // More info https://github.com/hakimel/reveal.js#configuration
             Reveal.initialize({
