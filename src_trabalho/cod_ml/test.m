@@ -21,7 +21,7 @@ e = 1; p = 1;% Elementos de treino
 num_clas = tam/10; tam_classe_con = tam_con/10; tam_class_tre = tam_treino/10;
 pos_conhecidas = zeros(1,tam_classe_con);
 pos_treino = zeros(1,tam_class_tre);
-for i=1:9
+for i=1:2
     pos_conhecidas(p : p + tam_classe_con - 1) = e : e + tam_classe_con - 1;
     pos_treino(p : p + tam_class_tre - 1) = e + tam_classe_con : e + tam_classe_con + tam_class_tre - 1;
     e = e + num_clas;
