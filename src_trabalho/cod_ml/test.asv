@@ -1,9 +1,9 @@
 clc
 clear
 format long g;
-%parpool(4)
+parpool(2);
 tic;
-tam = 1000; percentagem_conhecida = .3; percentagem_treino = .1;
+tam = 500; percentagem_conhecida = .5; percentagem_treino = .1;
 tam_con = tam * percentagem_conhecida;
 tam_treino = tam * percentagem_treino;
 sinal_grafo = carregar_grafo(tam);
@@ -25,26 +25,31 @@ for i=1:1
     pos_conhecidas(p : p + tam_classe_con - 1) = e : e + tam_classe_con - 1;
     pos_treino(p : p + tam_class_tre - 1) = e + tam_classe_con : e + tam_classe_con + tam_class_tre - 1;
     e = e + num_clas;
-    p = p + tam_classe_con;
+    %p = p + tam_classe_con;
 end
 
 % Etiquetas para os nós conhecidos
 for i=pos_conhecidas
-    S_con(i) = -1;
+    S_con(i) = 1;
 end
 
 % Etiquetas para os nós de treino
 for i=pos_treino
-    S_tre(i) = 1;
+    S_tre(i) = -1;
 end
 
 filtro = Filtro(sinal_grafo.matrizAdjacencia, 15, S_con, S_tre');
 
 %MSR = sqrt(sum((condicao - ones(tam,1)).^2));
 % w.mostra_grafo
+S_pred = zeros(1,tam);
 filtro.coeficientes;
-
-S_pred = filtro.filtro_construido * S_con';
-
+tam_pred = len(filtro.S_pred);
+for i=1:tam
+    if filtro.S_pred(i) <= 0
+        S_pred(i) = 0
+    else
+    end
+end
 toc;
-%delete(gcp)
+delete(gcp);
