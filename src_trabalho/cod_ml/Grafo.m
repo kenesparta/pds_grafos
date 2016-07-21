@@ -10,7 +10,7 @@ classdef Grafo < handle
         function gr = Grafo(nos)
             gr.nos = nos;
             gr.tamanho = length(nos);
-            gr.matrizAdjacencia = gr.calulo_matriz_adjacencia;
+            gr.matrizAdjacencia = triu(gr.calulo_matriz_adjacencia,1);
             gr.coordenadas = gr.calcular_coordenadas;
         end
         

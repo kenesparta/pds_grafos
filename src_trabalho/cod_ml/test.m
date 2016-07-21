@@ -3,7 +3,7 @@ clear
 format long g;
 parpool(2);
 tic;
-tam = 1000; percentagem_conhecida = .3; percentagem_treino = .1;
+tam = 100; percentagem_conhecida = .3; percentagem_treino = .2;
 tam_con = tam * percentagem_conhecida;
 tam_treino = tam * percentagem_treino;
 sinal_grafo = carregar_grafo(tam);
@@ -21,7 +21,7 @@ e = 1; p = 1;% Elementos de treino
 num_clas = tam/10; tam_classe_con = tam_con/10; tam_class_tre = tam_treino/10;
 pos_conhecidas = zeros(1,tam_classe_con);
 pos_treino = zeros(1,tam_class_tre);
-for i=1:2
+for i=1:9
     pos_conhecidas(p : p + tam_classe_con - 1) = e : e + tam_classe_con - 1;
     pos_treino(p : p + tam_class_tre - 1) = e + tam_classe_con : e + tam_classe_con + tam_class_tre - 1;
     e = e + num_clas;
